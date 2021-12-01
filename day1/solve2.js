@@ -1,0 +1,1 @@
+console.log((require('fs').readFileSync("input.txt")+"").split("\n").map(n=>+n).map((n,i,a)=>(n+a[i+1]+a[i+2])).filter(n=>!isNaN(n)).filter((n,i,a)=>(i>0&&n>a[i-1])).length);

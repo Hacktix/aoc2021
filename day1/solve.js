@@ -1,0 +1,1 @@
+console.log((require('fs').readFileSync("input.txt")+"").split("\n").map(n=>+n).filter((n,i,a)=>(i>0&&n>a[i-1])).length);
