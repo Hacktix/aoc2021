@@ -1,0 +1,1 @@
+console.log(Object.values((require('fs').readFileSync("input.txt")+"").split("\n").map(l=>l.split(" ")).map(m=>({h:(m[0]==="forward"?(+m[1]):0),d:(m[0]==="down"?(+m[1]):m[0]==="up"?(-m[1]):0)})).reduce((p,c)=>({h:p.h+c.h,d:p.d+c.d}))).reduce((p,c)=>p*c))
