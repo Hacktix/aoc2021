@@ -1,0 +1,1 @@
+console.log(new Array(2).fill(parseInt(new Array(12).fill((require('fs').readFileSync("input.txt")+"").split("\n")).map((a,i)=>a.map(l=>l[i])).map(a=>a.reduce((p,c)=>p+(c==="0"?-1:1),0)).map(v=>v<0?"0":"1").join(""),2)).map((v,i)=>i===0?v:((~v)&0xfff)).reduce((p,c)=>p*c))
